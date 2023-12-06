@@ -3,10 +3,10 @@
 # Introduction to PCA
 
 ## Overview
-This document explores the use of Principal Component Analysis (PCA) in a machine learning context, specifically for image classification using a dataset of numerical representations of digits. The dataset is loaded using scikit-learn's `load_digits` function, and initial exploration is conducted to understand its structure.
+This document explores the use of Principal Component Analysis (PCA) in a machine learning context, specifically for image classification using a dataset of numerical representations of digits. The dataset is loaded using sci-kit-learn's `load_digits` function, and initial exploration is conducted to understand its structure.
 
 ## Dataset Exploration
-The dataset consists of 1797 images, each represented by 64 numerical features (8x8 pixel values). The target variable represents the digit each image corresponds to (ranging from 0 to 9). After loading the data, a DataFrame is created for easier analysis.
+The dataset consists of 1797 images, each represented by 64 numerical features (8x8 pixel values). The target variable represents the digit each image corresponds to (ranging from 0 to 9). After loading the data, a data frame is created for easier analysis.
 
 ## Preparing the Model
 To train a machine learning model, the features are scaled using `StandardScaler` and the data is split into training and testing sets. A Logistic Regression model is then trained on the original dataset, and its accuracy is evaluated.
@@ -16,3 +16,14 @@ Principal Component Analysis (PCA) is employed to reduce the dimensionality of t
 
 ## Conclusion
 The document concludes with a summary table showcasing the impact of different levels of retained variance on the model's accuracy after applying PCA. This analysis provides insights into the trade-off between dimensionality reduction and model accuracy. The table indicates that as we reduce the dimensionality (and retain less variance), there is a gradual decrease in accuracy, demonstrating the importance of finding a balance between dimensionality reduction and model performance.
+
+| Variance Selected | Features Retained | Accuracy |
+| ------------------ | ----------------- | -------- |
+| 95                | 27                | 96.9     |
+| 90                | 21                | 96.3     |
+| 85                | 17                | 95       |
+| 80                | 13                | 94.4     |
+| 75                | 11                | 93.05    |
+| 70                | 9                 | 93.88    |
+| 65                | 8                 | 90.83    |
+
